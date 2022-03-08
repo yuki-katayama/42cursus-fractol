@@ -6,7 +6,7 @@
 #    By: kyuki <kyuki@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 12:41:47 by kyuki             #+#    #+#              #
-#    Updated: 2021/07/05 12:41:48 by kyuki            ###   ########.fr        #
+#    Updated: 2022/03/08 12:42:05 by kyuki            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,6 +94,7 @@ clean	:	## Remove object
 .PHONY: fclean
 fclean	:	clean ## Remove object and static
 			@echo "\033[0;33mRemoving executable..."
+			$(RM) -rf ./minilibx
 			$(MAKE) fclean -C ./libft
 			$(RM) $(NAME)
 			@echo "\033[0m"
